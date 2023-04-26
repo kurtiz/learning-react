@@ -1,7 +1,15 @@
+import {ReactNode} from "react";
 
-const Alert = () => {
+interface AlertProp {
+    children: ReactNode
+}
+
+const Alert = ({children}: AlertProp) => {
     return (
-        <div>Alert</div>
+        <div className="alert alert-primary" role="alert">
+            {children}
+        </div>
+
     )
 }
 
